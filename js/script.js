@@ -30,6 +30,10 @@ document.body.addEventListener("click", function (e) {
     // Scroll to other links
     if (href !== "#" && href.startsWith("#"))
       document.querySelector(href).scrollIntoView({ behavior: "smooth" });
+
+    // Close mobile naviagtion
+    if (link.classList.contains("main-nav-link"))
+      headerEl.classList.remove("nav-open");
   }
 });
 
