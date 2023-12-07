@@ -22,11 +22,11 @@
 
 @media (max-width: 75em) {
   html {
-    /* 9px / 16px  */
     font-size: 56.25%;
   }
   .section-hero {
     height: auto;
+    row-gap: 4.8rem;
   }
   .grid {
     column-gap: 4.8rem;
@@ -66,10 +66,6 @@
     grid-template-columns: 55fr 45fr;
   }
 
-  .delivered-meals {
-    margin-top: 6.4rem;
-  }
-
   .logos-row img {
     height: 2.4rem;
   }
@@ -91,7 +87,6 @@
   }
 
   .cta {
-    /* 3/5 = 60% + 2/5 = 40% */
     grid-template-columns: 3fr 2fr;
   }
 
