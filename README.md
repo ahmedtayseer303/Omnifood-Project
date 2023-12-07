@@ -1,2 +1,2 @@
 # Omnifood-Project
-Web page for a company that sell healty diets
+A web page for a company that sells healthy meals and diets
