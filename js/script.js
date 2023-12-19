@@ -1,3 +1,4 @@
+///////////////////////////////////////////////////////////
 // Set the year
 const yearEl = document.querySelector(".year");
 yearEl.textContent = new Date().getFullYear();
@@ -66,6 +67,51 @@ const obs = new IntersectionObserver(
 obs.observe(sectionHeroEl);
 
 ///////////////////////////////////////////////////////////
+// // Menu fade animation
+// const navHeader = document.querySelector(".header");
+// const links = navHeader.querySelectorAll("a");
+
+// const handleHover = function (e) {
+//   if (!e.target.closest("a")) return;
+
+//   links.forEach((l) => {
+//     if (l !== e.target.closest("a")) l.style.opacity = this;
+//   });
+// };
+
+// navHeader.addEventListener("mouseover", handleHover.bind(0.65));
+// navHeader.addEventListener("mouseout", handleHover.bind(1));
+
+///////////////////////////////////////////////////////////
+// Reveal sections
+
+// Reveal sections only when no scroll at the beginning
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+
+  if (window.scrollY) return;
+
+  const revealSection = function (entries, observer) {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.remove("section--hidden");
+
+    observer.unobserve(entry.target);
+  };
+
+  const sectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.15,
+  });
+  sections.forEach((s) => {
+    s.classList.add("section--hidden");
+    sectionObserver.observe(s);
+  });
+});
+
+///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
@@ -79,7 +125,6 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }

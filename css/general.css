@@ -259,6 +259,16 @@ body {
   box-shadow: 0 0 0 0.6rem rgba(232, 127, 36, 0.5);
 }
 
+/* Revealing Section */
+section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 /* HELPER/SETTINGS CLASSES */
 .margin-right-sm {
   margin-right: 1.6rem !important;

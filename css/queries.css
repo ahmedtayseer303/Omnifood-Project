@@ -280,7 +280,7 @@
 }
 
 /* Fixing flexbox gap property missing in some Safari versions */
-
+/* Write margin (right or bottom) to each child of the element that have flex gap */
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
   margin-right: 3.2rem;
 }
