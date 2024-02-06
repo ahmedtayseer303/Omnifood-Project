@@ -159,6 +159,20 @@
   .main-nav-link:active {
     color: #e67e22;
   }
+
+  /* Added for other image of food */
+  .hero {
+    padding: 0 8rem;
+  }
+
+  .hero-text-box {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 4.2rem;
+  }
 }
 
 /**************************/

@@ -31,7 +31,7 @@
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 500;
-  color: #fae5d3;
+  color: #fdf2e9;
   transition: all 0.3s;
 }
 
@@ -65,7 +65,7 @@
 .icon-mobile-nav {
   height: 4.8rem;
   width: 4.8rem;
-  color: #fae5d3;
+  color: #fdf2e9;
 }
 
 .icon-mobile-nav[name="close-outline"] {
@@ -109,8 +109,8 @@
 
 .section-hero {
   background-image: linear-gradient(
-      rgba(34, 34, 34, 0.6),
-      rgba(34, 34, 34, 0.6)
+      rgba(34, 34, 34, 0.65),
+      rgba(34, 34, 34, 0.65)
     ),
     url(../img/hero-min.jpg);
   background-size: cover;
@@ -132,7 +132,7 @@
 }
 
 .hero-description {
-  color: #fae5d3;
+  color: #fdf2e9;
   font-size: 2rem;
   line-height: 1.6;
   margin-bottom: 4.8rem;
@@ -161,7 +161,7 @@
 }
 
 .delivered-text {
-  color: #fae5d3;
+  color: #fdf2e9;
   font-size: 1.8rem;
   line-height: 1.2;
   font-weight: 600;
@@ -549,7 +549,7 @@
       rgba(235, 151, 77, 0.35),
       rgba(232, 127, 36, 0.35)
     ),
-    url(../img/eating.jpg);
+    url(../img/action-img-min.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -667,4 +667,15 @@
 .contacts {
   font-style: normal;
   line-height: 1.6;
+}
+
+/* Added name link */
+.name-link:link,
+.name-link:visited {
+  border-bottom: 1px solid #757575;
+  transition: all 0.3s;
+}
+.name-link:hover,
+.name-link:active {
+  border-bottom: 1px solid transparent;
 }
